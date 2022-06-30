@@ -1,6 +1,38 @@
+<script>
+  function newJob() {
+    const updateData = (Query) => {
+    return new Promise((resolve, reject) => {
+        db.run(Query, (err) => {
+            if (err) {
+                reject("Some Error Occured");
+            }
+            resolve("Data Updated");
+        });
+    });
+};
+  
+    // Query
+
+    var updateQuery = 'UPDATE jobs SET new_job = 0';
+      
+    // Running Query
+    updateData(updateQuery)
+        .then((data) => {
+            console.log(data);
+            return updateData(updateQuery);
+        })
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+};
+  newJob();
+</script>
 <div id="job-view-container" class="container">
   <div class="row text-center">
-    <a class="back-link main-color" href="/">Voltar</a>
+    <a class="back-link main-color" href="/">Voltar</button></a>
     <div id="img-container" class="col-md-12">
       <img src="/img/company.svg" alt="Company">
     </div>
