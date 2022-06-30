@@ -1,5 +1,5 @@
 {
-  "name": "sua_vaga",
+  "name": "vagas_dev",
   "version": "1.0.0",
   "description": "Este sistema é um portal de vagas de trabalho  para programadores",
   "main": "app.js",
