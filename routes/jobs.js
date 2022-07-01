@@ -19,17 +19,6 @@ router.get('/view/:id', (req, res) => Job.findOne({
   .catch(err => console.log(err))
   );
 
-/*  // atualizar new_job
-router.put('/view/:id', async (req, res) => {
-  const job = await Job.findByPk(1);
-  console.log(produto);
-  job.new_job = 0;
-  
-  const resultadoSave = await job.save();
-  console.log(resultadoSave);
-
-});
-*/
   
   // form da rota de envio  
 router.get('/add', (req, res) => {
